@@ -8,12 +8,6 @@ public class ballProperties : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        realColor = this.GetComponent<SpriteRenderer>().color;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        realColor = new Color(0.898f, 0.870f, 0.467f);
     }
 }

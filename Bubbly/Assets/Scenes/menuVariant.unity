@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 32981499}
   - component: {fileID: 32981498}
   - component: {fileID: 32981497}
-  - component: {fileID: 32981500}
   m_Layer: 5
   m_Name: difficultySelect
   m_TagString: Untagged
@@ -280,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127, y: -0.000030518}
+  m_AnchoredPosition: {x: 84.54999, y: -0.000030518}
   m_SizeDelta: {x: 91.9, y: 89.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &32981497
@@ -323,7 +322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 32981500}
+      - m_Target: {fileID: 120989824}
         m_MethodName: difficultySelect
         m_Mode: 1
         m_Arguments:
@@ -373,20 +372,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32981495}
   m_CullTransparentMesh: 1
---- !u!114 &32981500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32981495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585cfba67d7771e4c91c4643ecd85d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difficulty: {fileID: 32981498}
-  colored: {fileID: 120989822}
 --- !u!1 &45111373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: 0.000011444}
+  m_AnchoredPosition: {x: -84.55, y: 0.000011444}
   m_SizeDelta: {x: 91.9, y: 89.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120989821
@@ -1149,6 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficulty: {fileID: 32981498}
   colored: {fileID: 120989822}
+  nextScore: {fileID: 1195914132}
 --- !u!1 &129630074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &258495235
 Transform:
   m_ObjectHideFlags: 0
@@ -2878,7 +2864,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 32981500}
+      - m_Target: {fileID: 120989824}
         m_MethodName: backButton
         m_Mode: 1
         m_Arguments:
@@ -2962,8 +2948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -23}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -36.3}
+  m_SizeDelta: {x: 160, y: 56.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735584880
 MonoBehaviour:
@@ -2998,7 +2984,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Unlocked Colors
+  m_Text: 'Unlocked
+
+    Colors'
 --- !u!222 &735584881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3696,8 +3684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1.05, y: -15.350029}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0.0000060797, y: -15}
+  m_SizeDelta: {x: 347.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195914132
 MonoBehaviour:
@@ -3721,7 +3709,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2b231e7c604124f4da5f64ead902b139, type: 3}
-    m_FontSize: 23
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -6174,8 +6162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000015258789, y: -22.99997}
-  m_SizeDelta: {x: 199.6, y: 30}
+  m_AnchoredPosition: {x: 0.000015258789, y: -37.1}
+  m_SizeDelta: {x: 199.6, y: 58.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086082838
 MonoBehaviour:
@@ -6210,7 +6198,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Unlocked Difficulties
+  m_Text: 'Unlocked
+
+    Difficulties'
 --- !u!222 &2086082839
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,20 +13,20 @@ public class Unlocks : MonoBehaviour
         switch (PlayerPrefs.GetInt("Color", 0))
       {
           case 1:
-              sp.color = Color.blue;
+              sp.color = new Color(0.407f, 0.635f, 0.988f);
               break;
           case 2:
-              sp.color = Color.yellow;
+              sp.color = new Color(0.898f, 0.870f, 0.467f);
               break;
-          default:
+            case 3:
+                sp.color = new Color(0.905f, 0.619f, 0.929f);
+                break;
+            case 4:
+                sp.color = Color.black;
+                break;
+            default:
                 sp.color = Color.white;
               break;
       }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
