@@ -15,11 +15,15 @@ public class interaction : MonoBehaviour
     int down;
     public GameObject restartButton;
 
+    AudioSource sounds;
+
     public bool scored;
 
     // Start is called before the first frame update
     void Start()
     {
+        sounds = this.gameObject.GetComponent<AudioSource>();
+
         scored = false;
         restartButton.transform.GetChild(0).gameObject.SetActive(false);
         restartButton.SetActive(false);
@@ -96,6 +100,8 @@ public class interaction : MonoBehaviour
         {
             if (redBalls[i].Equals(collision.gameObject))
             {
+                sounds.clip = Resources.Load<AudioClip>("sploosh1");
+                sounds.Play();
                 GameObject instance = Instantiate(Resources.Load("RedParticles")) as GameObject;
                 instance.transform.position = collision.gameObject.transform.position;
                 Destroy(collision.gameObject);
@@ -107,6 +113,8 @@ public class interaction : MonoBehaviour
         {
             if (greenBalls[i].Equals(collision.gameObject))
             {
+                sounds.clip = Resources.Load<AudioClip>("sploosh2");
+                sounds.Play();
                 GameObject instance = Instantiate(Resources.Load("GreenParticles")) as GameObject;
                 instance.transform.position = collision.gameObject.transform.position;
                 Destroy(collision.gameObject);
