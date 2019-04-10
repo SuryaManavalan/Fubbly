@@ -8,7 +8,6 @@ public class menuFunctions : MonoBehaviour
 {
     public Image difficulty;
     public Image colored;
-    public Image sound;
     public Text nextScore;
     int cheat;
 
@@ -16,16 +15,6 @@ public class menuFunctions : MonoBehaviour
 
     private void Start() {
         cheat = 0;
-
-        switch (PlayerPrefs.GetInt("Mute", 0))
-        {
-            case 0:
-                sound.sprite = Resources.Load<Sprite>("musicnote");
-                break;
-            default:
-                sound.sprite = Resources.Load<Sprite>("musicnoteslash");
-                break;
-        }
 
         switch (PlayerPrefs.GetInt("Color", 0))
         {
@@ -82,23 +71,6 @@ public class menuFunctions : MonoBehaviour
     public void backButton()
     {
         SceneManager.LoadScene(0);
-    }
-
-    public void muteButton()
-    {
-        cheat++;
-
-        switch (PlayerPrefs.GetInt("Mute", 0))
-        {
-            case 0:
-                PlayerPrefs.SetInt("Mute", 1);
-                sound.sprite = Resources.Load<Sprite>("musicnoteslash");
-                break;
-            default:
-                PlayerPrefs.SetInt("Mute", 0);
-                sound.sprite = Resources.Load<Sprite>("musicnote");
-                break;
-        }
     }
 
     public void difficultySelect()
